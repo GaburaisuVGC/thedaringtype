@@ -62,13 +62,43 @@ function NavLinks({ isMobile = false, handleCloseNavMenu, handleOpenContactModal
                   window.location.href = link.href;
                 }
               }}
+              sx={{
+                fontFamily: 'Diphylleia',
+                fontWeight: 'bold',
+                background: 'linear-gradient(90deg, rgba(181,204,220,1) 10%, rgba(216,212,233,1) 70%, rgba(239,237,234,1) 85%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
             >
-              <ListItemText primary={link.text} />
+              <ListItemText
+                primary={link.text}
+                primaryTypographyProps={{
+                  sx: {
+                    fontFamily: 'Diphylleia',
+                    fontWeight: 'bold',
+                    background: 'linear-gradient(90deg, rgba(181,204,220,1) 10%, rgba(216,212,233,1) 70%, rgba(239,237,234,1) 85%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                  }
+                }}
+              />
               {link.submenu ? (
                 mobileOpenIndexes[index] ? (
-                  <ExpandLess />
+                  <ExpandLess
+                    sx={{
+                      background: 'linear-gradient(90deg, rgba(181,204,220,1) 10%, rgba(216,212,233,1) 70%, rgba(239,237,234,1) 85%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                    }}
+                  />
                 ) : (
-                  <ExpandMore />
+                  <ExpandMore
+                    sx={{
+                      background: 'linear-gradient(90deg, rgba(181,204,220,1) 10%, rgba(216,212,233,1) 70%, rgba(239,237,234,1) 85%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                    }}
+                  />
                 )
               ) : null}
             </ListItem>
@@ -85,7 +115,18 @@ function NavLinks({ isMobile = false, handleCloseNavMenu, handleOpenContactModal
                         window.location.href = sublink.href;
                       }}
                     >
-                      <ListItemText primary={sublink.text} />
+                      <ListItemText
+                        primary={sublink.text}
+                        primaryTypographyProps={{
+                          sx: {
+                            fontFamily: 'Diphylleia',
+                            fontWeight: 'bold',
+                            background: 'linear-gradient(90deg, rgba(181,204,220,1) 10%, rgba(216,212,233,1) 70%, rgba(239,237,234,1) 85%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                          }
+                        }}
+                      />
                     </ListItem>
                   ))}
                 </List>

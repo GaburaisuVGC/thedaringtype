@@ -23,7 +23,7 @@ function Home() {
           background:
             "linear-gradient(90deg, rgba(181,204,220,1) 10%, rgba(216,212,233,1) 70%, rgba(239,237,234,1) 85%)",
           color: "#ffffff",
-          marginTop: { xs: "0px", md: "-100px" },
+          marginTop: { xs: "0px", md: "-5vh" },
           paddingTop: { xs: "50px", md: "100px" },
           boxSizing: "border-box",
           overflow: "hidden",
@@ -36,7 +36,7 @@ function Home() {
         }}
       >
         {/* Titre principal */}
-        <Box sx={{ zIndex: 2, mb: { xs: 4, md: 4 }, mt: { xs: 0, md: 2 } }}>
+        <Box sx={{ zIndex: 2, mb: { xs: "50px", md: 4 }, mt: { xs: 0, md: 2 } }}>
           <Typography
             variant="h1"
             component="div"
@@ -266,9 +266,8 @@ function Home() {
                   professionnelle et personnelle dans l’industrie.
                 </Typography>
                 <Typography
-                  variant="h6"
+                  variant="body1"
                   component="h3"
-                  gutterBottom
                   sx={{
                     fontFamily: "Josefin Sans",
                     fontWeight: "bold",
@@ -280,7 +279,7 @@ function Home() {
                 <Typography
                   variant="body1"
                   paragraph
-                  sx={{ fontFamily: "Josefin Sans", color: "#7f7f7f" }}
+                  sx={{ fontFamily: "Josefin Sans", color: "#7f7f7f", mb: 0 }}
                 >
                   Les talents : en les guidant vers des carrières alignées avec
                   leurs ambitions.
