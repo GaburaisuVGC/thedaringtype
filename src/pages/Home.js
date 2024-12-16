@@ -17,6 +17,9 @@ function Home() {
           position: "relative",
           width: "100%",
           height: { xs: "100vh", md: "80vh" },
+          "@media (orientation: landscape) and (max-width:980px)": {
+            height: "200vh",
+          },
           background:
             "linear-gradient(90deg, rgba(181,204,220,1) 10%, rgba(216,212,233,1) 70%, rgba(239,237,234,1) 85%)",
           color: "#ffffff",
@@ -33,7 +36,7 @@ function Home() {
         }}
       >
         {/* Titre principal */}
-        <Box sx={{ zIndex: 2, mb: 2 }}>
+        <Box sx={{ zIndex: 2, mb: { xs: 4, md: 4 }, mt: { xs: 0, md: 2 } }}>
           <Typography
             variant="h1"
             component="div"
