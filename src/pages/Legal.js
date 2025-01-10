@@ -70,7 +70,6 @@ function Legal() {
             du présent site internet{" "}
             <a
               href="https://www.thedaringtype.com"
-              target="_blank"
               rel="noopener noreferrer"
             >
               www.thedaringtype.com
@@ -113,7 +112,6 @@ function Legal() {
             Site Web :{" "}
             <a
               href="https://www.thedaringtype.com"
-              target="_blank"
               rel="noopener noreferrer"
             >
               www.thedaringtype.com
@@ -176,7 +174,6 @@ function Legal() {
             Ce site (
             <a
               href="https://www.thedaringtype.com"
-              target="_blank"
               rel="noopener noreferrer"
             >
               www.thedaringtype.com
@@ -223,7 +220,6 @@ function Legal() {
             Le site{" "}
             <a
               href="https://www.thedaringtype.com"
-              target="_blank"
               rel="noopener noreferrer"
             >
               www.thedaringtype.com
@@ -304,7 +300,6 @@ function Legal() {
             sont présentés sur notre site{" "}
             <a
               href="https://www.thedaringtype.com"
-              target="_blank"
               rel="noopener noreferrer"
             >
               www.thedaringtype.com
@@ -393,7 +388,6 @@ function Legal() {
             Tout le contenu présent sur le site{" "}
             <a
               href="https://www.thedaringtype.com"
-              target="_blank"
               rel="noopener noreferrer"
             >
               www.thedaringtype.com
@@ -476,7 +470,6 @@ function Legal() {
             Les présentes conditions du site{" "}
             <a
               href="https://www.thedaringtype.com"
-              target="_blank"
               rel="noopener noreferrer"
             >
               www.thedaringtype.com

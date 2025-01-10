@@ -12,9 +12,27 @@ import {
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useTheme } from "@mui/material/styles";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 function Services() {
   const theme = useTheme();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const anchor = document.querySelector(location.hash);
+      if (anchor) {
+        const yOffset = -80;
+        const yPosition = anchor.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({
+          top: yPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [location.pathname, location.hash]); 
 
   return (
     <Box sx={{ fontFamily: "Josefin Sans" }}>
@@ -32,7 +50,7 @@ function Services() {
         }}
       >
         <Container maxWidth="lg">
-          <Box sx={{ textAlign: "center", mb: 4 }}>
+          <Box sx={{ textAlign: "center", mb: 4 }} id="particuliers">
             <Typography
               variant="h4"
               component="h2"
@@ -378,7 +396,7 @@ function Services() {
         }}
       >
         <Container maxWidth="lg">
-          <Box sx={{ textAlign: "center", mb: 4 }}>
+          <Box sx={{ textAlign: "center", mb: 4 }} id="pro">
             <Typography
               variant="h4"
               component="h2"

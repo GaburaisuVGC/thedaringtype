@@ -15,7 +15,11 @@ function NavLinks({ isMobile = false, handleCloseNavMenu, handleOpenContactModal
     { text: "Accueil", href: '/' },
     { text: "Qui suis-je", href: '/#about' },
     { text: "Mon approche", href: '/approach' },
-    { text: "Accompagnement", href: '/services' },
+    { text: "Accompagnement", href: '/services', submenu: [
+      { text: "Pour les professionnels", href: '/services#pro' },
+      { text: "Pour les particuliers", href: '/services#particuliers' },
+      { text: "Tarif des prestations", href: '/services#tarif' },
+    ] },
     // { text: "Ressources", href: '/resources' },
     { text: "Contact", action: 'openContactModal' },
   ];
@@ -177,6 +181,13 @@ function NavLinks({ isMobile = false, handleCloseNavMenu, handleOpenContactModal
                       component="a"
                       href={sublink.href}
                       onClick={handleCloseMenu}
+                      sx={{
+                        fontFamily: 'Diphylleia',
+                        fontWeight: 'bold',
+                        background: 'linear-gradient(90deg, rgba(181,204,220,1) 10%, rgba(216,212,233,1) 70%, rgba(239,237,234,1) 85%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                      }}
                     >
                       {sublink.text}
                     </MenuItem>

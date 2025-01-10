@@ -16,6 +16,7 @@ function ContactModal({ open, onClose }) {
     firstName: '',
     lastName: '',
     email: '',
+    subject: '',
   });
   const [error, setError] = useState(null);
 
@@ -29,8 +30,10 @@ function ContactModal({ open, onClose }) {
     const templateParams = {
       to_name: 'The Daring Type',
       from_name: `${formData.firstName} ${formData.lastName}`,
-      from_email: formData.email,
-      message: 'Je souhaite prendre contact avec vous.',
+      from_email: formData.email,   
+      reply_to: formData.email,
+      subject: formData.subject, 
+      message: 'Je souhaite prendre contact avec vous.', 
     };
 
     emailjs.send(serviceID, templateID, templateParams, userID)
@@ -56,6 +59,7 @@ function ContactModal({ open, onClose }) {
       firstName: '',
       lastName: '',
       email: '',
+      subject: '',
     });
     onClose();
   };
@@ -86,7 +90,7 @@ function ContactModal({ open, onClose }) {
             boxShadow: 24,
           }}
         >
-          {/* Partie gauche */}
+          {/* Partie gauche : illustration */}
           <Box
             sx={{
               flex: 1,
@@ -97,7 +101,7 @@ function ContactModal({ open, onClose }) {
             }}
           ></Box>
 
-          {/* Partie droite */}
+          {/* Partie droite : formulaire */}
           <Box
             sx={{
               flex: 1,
@@ -124,12 +128,14 @@ function ContactModal({ open, onClose }) {
                 >
                   Contactez-moi
                 </Typography>
-                <form onSubmit={handleSubmit}>
+
                 {error && (
-  <Typography variant="body1" sx={{ color: 'red' }}>
-    {error}
-  </Typography>
-)}
+                  <Typography variant="body1" sx={{ color: 'red' }}>
+                    {error}
+                  </Typography>
+                )}
+
+                <form onSubmit={handleSubmit}>
                   <TextField
                     fullWidth
                     label="Prénom"
@@ -154,6 +160,16 @@ function ContactModal({ open, onClose }) {
                     name="email"
                     type="email"
                     value={formData.email}
+                    onChange={handleChange}
+                    margin="normal"
+                    required
+                  />
+                  <TextField
+                    fullWidth
+                    label="Votre message"
+                    name="subject"
+                    type="text"
+                    value={formData.subject}
                     onChange={handleChange}
                     margin="normal"
                     required

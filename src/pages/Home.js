@@ -3,9 +3,27 @@ import { Container, Box, Typography, Button, Grid } from "@mui/material";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useTheme } from "@mui/material/styles";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 function Home() {
   const theme = useTheme();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const anchor = document.querySelector(location.hash);
+      if (anchor) {
+        const yOffset = -80;
+        const yPosition = anchor.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({
+          top: yPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [location.pathname, location.hash]); 
 
   return (
     <Box sx={{ fontFamily: "Josefin Sans" }}>
@@ -161,7 +179,6 @@ function Home() {
           <Button
             variant="contained"
             href="/services"
-            target="_blank"
             rel="noopener noreferrer"
             sx={{
               width: { xs: "90%", sm: "auto" },
@@ -319,7 +336,6 @@ function Home() {
                 <Button
                   variant="contained"
                   href="/approach"
-                  target="_blank"
                   rel="noopener noreferrer"
                   sx={{
                     mt: 2,
@@ -586,7 +602,6 @@ function Home() {
                 <Button
                   variant="contained"
                   href="/approach"
-                  target="_blank"
                   rel="noopener noreferrer"
                   sx={{
                     mt: 2,
