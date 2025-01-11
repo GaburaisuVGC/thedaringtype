@@ -145,10 +145,10 @@ function Home() {
             gutterBottom
             sx={{ fontFamily: "Diphylleia", fontWeight: "bold" }}
           >
-            Conseil Carrière
+            Conseil stratégique des marques 
           </Typography>
           <Typography variant="body1" sx={{ fontFamily: "Josefin Sans" }}>
-            Marketing • Retail • Education
+          Gestion de projets marketing • Inclusion • Recrutements
           </Typography>
 
           <Box sx={{ mt: 2 }} />
@@ -159,10 +159,10 @@ function Home() {
             gutterBottom
             sx={{ fontFamily: "Diphylleia", fontWeight: "bold" }}
           >
-            Conseil Inclusion des marques
+            Conseil Carrière
           </Typography>
           <Typography variant="body1" sx={{ fontFamily: "Josefin Sans" }}>
-            dans l’industrie du luxe et de la cosmétique
+          Marketing • Retail • Education
           </Typography>
         </Box>
 
@@ -268,19 +268,28 @@ function Home() {
                     color: "#a2adbb",
                   }}
                 >
-                  Hello !
+                  Bienvenue 
                 </Typography>
                 <Typography
                   variant="body1"
                   paragraph
                   sx={{ fontFamily: "Josefin Sans", color: "#7f7f7f" }}
                 >
-                  Chez The Daring Type, je vous aide à transformer vos
-                  aspirations en projets concrets grâce à une approche basée sur
-                  l’insight : rendre simples des sujets complexes pour que vous
-                  passiez de “Par où commencer ?” à “Incroyable, je peux
-                  vraiment y arriver !” au traver ’une expérience
-                  professionnelle et personnelle dans l’industrie.
+                  Chez The Daring Type, “de ceux qui osent”,  nous croyons que oser est le moteur des transformations les plus significatives. Ce concept s’adresse à ceux qui, comme moi, choisissent d’avancer avec audace, même face à l’incertitude, pour transformer leur vision en réalité.
+                </Typography>
+                <Typography
+                  variant="body1"
+                  paragraph
+                  sx={{ fontFamily: "Josefin Sans", color: "#7f7f7f" }}
+                >
+                 Oser, c’est ce qui m’a permis de relever des défis professionnels et personnels et de tracer ma propre voie dans des environnements compétitifs, et de concrétiser des projets pouvant paraître ambitieux. Mon parcours m’a appris que chaque défi est une opportunité, à condition d’avoir les bonnes clés pour le transformer en succès.
+                </Typography>
+                <Typography
+                  variant="body1"
+                  paragraph
+                  sx={{ fontFamily: "Josefin Sans", color: "#7f7f7f" }}
+                >
+                Avec The Daring Type, c’est cette philosophie que je veux partager : aider ceux qui, comme moi, souhaitent faire la différence. Ici, je transmets cette vision: un espace pour aider les marques à se réinventer et pour accompagner les talents à trouver leur propre tournant audacieux. 
                 </Typography>
                 <Typography
                   variant="body1"
@@ -298,41 +307,16 @@ function Home() {
                   paragraph
                   sx={{ fontFamily: "Josefin Sans", color: "#7f7f7f", mb: 0 }}
                 >
-                  Les talents : en les guidant vers des carrières alignées avec
-                  leurs ambitions.
+Les entreprises et leurs marques en les guidant vers des stratégies de marques optimales ou en conseillant sur les meilleures pratiques en gestion de projets, inclusion et diversité.
                 </Typography>
                 <Typography
                   variant="body1"
                   paragraph
                   sx={{ fontFamily: "Josefin Sans", color: "#7f7f7f" }}
                 >
-                  Les entreprises : en les conseillant sur les meilleures
-                  pratiques et stratégies en inclusion et diversité.
+Les talents en transition professionnelle, ou jeunes diplômés  vers des parcours ambitieux et cohérents. avec la meilleure méthodologie. 
                 </Typography>
-                <Typography
-                  variant="body1"
-                  paragraph
-                  sx={{ fontFamily: "Josefin Sans", color: "#7f7f7f" }}
-                >
-                  Je suis Diana Vilsaint, experte en marketing, diplômée en
-                  management international et de l’ESCP Europe, spécialisée en
-                  Marketing & Communication. Avec plus de dix ans d’expérience
-                  dans la cosmétique, le luxe, et la mode, j’ai occupé des
-                  postes clés entre le marketing, le retail et l’éducation,
-                  notamment au Comex d’une entreprise internationale en tant que
-                  Directrice Marketing & Communication.
-                </Typography>
-                {/* <Typography
-                  variant="h6"
-                  component="h3"
-                  gutterBottom
-                  sx={{ fontFamily: 'Josefin Sans', fontWeight: 'bold', color: '#7f7f7f' }}
-                >
-                  Une expertise basée sur l’insight
-                </Typography>
-                <Typography variant="body1" paragraph sx={{ fontFamily: 'Josefin Sans', color: '#7f7f7f' }}>
-                Mon approche repose sur la notion d’insight, une vision éclairée et intuitive des enjeux actuels. J’accompagne aussi bien les talents, en les aidant à atteindre leurs ambitions professionnelles, que les entreprises, en proposant des workshops sur les meilleures pratiques en inclusion et diversité. 
-                </Typography> */}
+
                 <Button
                   variant="contained"
                   href="/approach"
