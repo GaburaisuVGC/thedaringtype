@@ -6,6 +6,7 @@ import Services from './pages/Services';
 import Legal from './pages/Legal';
 import CGV from "./pages/CGV";
 import "./App.css";
+import Lab from "./pages/Lab";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/cgv" element={<CGV />} />
           <Route path="/legal" element={<Legal />} />
+          <Route path="/lab" element={<Lab />} />
         </Routes>
       </Router>
     </div>

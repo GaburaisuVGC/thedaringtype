@@ -20,7 +20,7 @@ function NavLinks({ isMobile = false, handleCloseNavMenu, handleOpenContactModal
       { text: "Pour les particuliers", href: '/services#particuliers' },
       { text: "Tarif des prestations", href: '/services#tarif' },
     ] },
-    // { text: "Ressources", href: '/resources' },
+    { text: "The Daring Lab", href: '/lab' },
     { text: "Contact", action: 'openContactModal' },
   ];
 
