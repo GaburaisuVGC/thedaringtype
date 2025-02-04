@@ -14,7 +14,7 @@ function NavLinks({ isMobile = false, handleCloseNavMenu, handleOpenContactModal
   const links = [
     { text: "Accueil", href: '/' },
     { text: "Qui suis-je", href: '/#about' },
-    { text: "Mon approche", href: '/approach' },
+    { text: "Expertise", href: '/expertise' },
     { text: "Accompagnement", href: '/services', submenu: [
       { text: "Pour les professionnels", href: '/services#pro' },
       { text: "Pour les particuliers", href: '/services#particuliers' },

@@ -100,7 +100,7 @@ function Home() {
               component="span"
               sx={{ fontFamily: "Diphylleia", fontWeight: "normal" }}
             >
-              différence
+              <i>différence</i>
             </Box>
             <Box
               component="span"
@@ -319,7 +319,7 @@ Les talents en transition professionnelle, ou jeunes diplômés  vers des parcou
 
                 <Button
                   variant="contained"
-                  href="/approach"
+                  href="/expertise"
                   rel="noopener noreferrer"
                   sx={{
                     mt: 2,
@@ -351,135 +351,137 @@ Les talents en transition professionnelle, ou jeunes diplômés  vers des parcou
         </Container>
       </Box>
 
-      {/* Section Coaching & Accompagnement Stratégique */}
-      <Box
-        sx={{
-          width: "100%",
-          padding: { xs: 2, md: 8 },
-          backgroundColor: "#f9f9f9",
-          boxSizing: "border-box",
-          overflow: "hidden",
-        }}
-      >
-        <Container maxWidth="lg">
+{/* Section "Coaching & conseil stratégique" */}
+<Box
+  sx={{
+    width: "100%",
+    padding: { xs: 2, md: 8 },
+    backgroundColor: "#f9f9f9",
+    boxSizing: "border-box",
+    overflow: "hidden",
+  }}
+>
+  <Container maxWidth="lg">
+    <Grid container spacing={4} alignItems="center">
+      {/* Colonne image */}
+      <Grid item xs={12} md={4}>
+        <Box
+          component="img"
+          src="/images/diana8.jpg"
+          alt="Coaching & conseil stratégique"
+          sx={{
+            width: "100%",
+            maxWidth: { xs: "100%", md: "400px" },
+            borderRadius: 2,
+            boxShadow: 3,
+            objectFit: "contain",
+          }}
+        />
+      </Grid>
+
+      {/* Colonne texte */}
+      <Grid item xs={12} md={8}>
+        <Typography
+          variant="h4"
+          component="h2"
+          gutterBottom
+          sx={{
+            fontFamily: "Diphylleia",
+            fontWeight: "bold",
+            textAlign: { xs: "center", md: "left" },
+            color: "#7f7f7f",
+          }}
+        >
+          Coaching & conseil stratégique
+        </Typography>
+        <Typography
+          variant="body1"
+          paragraph
+          sx={{
+            fontFamily: "Josefin Sans",
+            color: "#7f7f7f",
+            textAlign: { xs: "center", md: "left" },
+          }}
+        >
+          Quel que soit votre point de départ, mon objectif est de vous donner des outils concrets, des conseils clairs et le coup de pouce nécessaire pour oser et avancer vers vos objectifs.
+        </Typography>
+
+        {/* Sous-parties empilées verticalement */}
+        <Box sx={{ textAlign: { xs: "center", md: "left" } }}>
           <Typography
-            variant="h4"
-            component="h2"
-            gutterBottom
+            variant="body1"
+            component="h3"
             sx={{
-              fontFamily: "Diphylleia",
+              fontFamily: "Josefin Sans",
               fontWeight: "bold",
-              textAlign: { xs: "center", md: "left" },
               color: "#7f7f7f",
+              mt: 2,
             }}
           >
-            Coaching & conseil stratégique
+            Pour les talents
           </Typography>
           <Typography
             variant="body1"
             paragraph
             sx={{ fontFamily: "Josefin Sans", color: "#7f7f7f" }}
           >
-            Quel que soit votre point de départ, mon objectif est de vous donner
-            des outils concrets, des conseils clairs et le coup de pouce
-            nécessaire pour oser et avancer vers vos objectifs.
+            Je vous aide à naviguer dans des secteurs exigeants et en constante évolution, en vous donnant les outils nécessaires pour construire une carrière alignée avec vos ambitions.
           </Typography>
+          <Typography
+            variant="body1"
+            component="h3"
+            sx={{
+              fontFamily: "Josefin Sans",
+              fontWeight: "bold",
+              color: "#7f7f7f",
+              mt: 2,
+            }}
+          >
+            Pour les professionnels
+          </Typography>
+          <Typography
+            variant="body1"
+            paragraph
+            sx={{ fontFamily: "Josefin Sans", color: "#7f7f7f" }}
+          >
+            J’interviens auprès des écoles et des entreprises pour initier des changements stratégiques sur des sujets d’inclusion et de diversité multiculturelle, dans une société toujours plus cosmopolite où prendre le bon virage le plus tôt possible est une nécessité.
+          </Typography>
+        </Box>
 
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={12}>
-              <Box
-                sx={{
-                  textAlign: { xs: "center", md: "left" },
-                  boxSizing: "border-box",
-                  overflow: "hidden",
-                }}
-              >
-                <Typography
-                  variant="body1"
-                  component="h3"
-                  sx={{
-                    fontFamily: "Josefin Sans",
-                    fontWeight: "bold",
-                    color: "#7f7f7f",
-                  }}
-                >
-                  Pour les talents
-                </Typography>
-                <Typography
-                  variant="body1"
-                  paragraph
-                  sx={{ fontFamily: "Josefin Sans", color: "#7f7f7f" }}
-                >
-                  Je vous aide à naviguer dans des secteurs exigeants et en
-                  constante évolution, en vous donnant les outils nécessaires
-                  pour construire une carrière alignée avec vos ambitions.
-                </Typography>
-              </Box>
-            </Grid>
-
-            <Grid item xs={12} md={12}>
-              <Box
-                sx={{
-                  textAlign: { xs: "center", md: "left" },
-                  boxSizing: "border-box",
-                  overflow: "hidden",
-                }}
-              >
-                <Typography
-                  variant="body1"
-                  component="h3"
-                  sx={{
-                    fontFamily: "Josefin Sans",
-                    fontWeight: "bold",
-                    color: "#7f7f7f",
-                  }}
-                >
-                  Pour les professionnels
-                </Typography>
-                <Typography
-                  variant="body1"
-                  paragraph
-                  sx={{ fontFamily: "Josefin Sans", color: "#7f7f7f" }}
-                >
-                  J’interviens auprès des écoles et des entreprises pour initier
-                  des changements stratégiques sur des sujets d’inclusion et de
-                  diversité multiculturel, dans un société toujours plus
-                  cosmopolite où prendre le bon virage le plus tôt possible est
-                  une nécessité.
-                </Typography>
-              </Box>
-            </Grid>
-          </Grid>
-
-          <Box sx={{ textAlign: { xs: "center", md: "left" }, mt: 4 }}>
-            <Button
-              variant="contained"
-              href="/services"
-              sx={{
-                width: { xs: "80%", sm: "auto" },
-                maxWidth: "300px",
-                fontFamily: "Josefin Sans",
-                backgroundColor: "#a2adbb",
-                color: "#ffffff",
+        <Box sx={{ textAlign: { xs: "center", md: "left" }, mt: 4 }}>
+          <Button
+            variant="contained"
+            href="/services"
+            sx={{
+              width: { xs: "80%", sm: "auto" },
+              maxWidth: "300px",
+              fontFamily: "Josefin Sans",
+              backgroundColor: "#a2adbb",
+              color: "#ffffff",
+              boxShadow: "none",
+              lineHeight: "1.5",
+              padding: "10px 20px",
+              textTransform: "none",
+              fontSize: "1.2rem",
+              borderColor: "#a2adbb",
+              "&:hover": {
+                backgroundColor: "#88929e",
+                color: "#e6e6e6",
                 boxShadow: "none",
-                lineHeight: "1.5",
-                padding: "10px 20px",
-                textTransform: "none",
-                fontSize: "1.2rem",
-                borderColor: "#a2adbb",
-                "&:hover": {
-                  backgroundColor: "#88929e",
-                  color: "#e6e6e6",
-                  boxShadow: "none",
-                },
-                borderRadius: "8px",
-              }}
-            >
-              Mes prestations
-            </Button>
-          </Box>
-        </Container>
-      </Box>
+              },
+              borderRadius: "8px",
+            }}
+          >
+            Mes prestations
+          </Button>
+        </Box>
+      </Grid>
+    </Grid>
+  </Container>
+</Box>
+
+
+
 
       {/* Deuxième Section "À propos de moi" */}
       <Box
@@ -585,7 +587,7 @@ Les talents en transition professionnelle, ou jeunes diplômés  vers des parcou
                 </Typography>
                 <Button
                   variant="contained"
-                  href="/approach"
+                  href="/expertise"
                   rel="noopener noreferrer"
                   sx={{
                     mt: 2,

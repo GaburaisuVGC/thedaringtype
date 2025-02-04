@@ -768,6 +768,47 @@ function Services() {
         </Container>
       </Box>
 
+      {/* Section Tarif et prestations */}
+      <Box
+        id="tarif"
+        sx={{
+          width: "100%",
+          padding: { xs: 2, md: 8 },
+          backgroundColor: "#ffffff",
+          boxSizing: "border-box",
+          overflow: "hidden",
+        }}
+      >
+        <Container maxWidth="lg">
+          <Box sx={{ textAlign: "center", mb: 4 }}>
+            <Typography
+              variant="h4"
+              component="h2"
+              gutterBottom
+              sx={{
+                fontFamily: "Diphylleia",
+                fontWeight: "bold",
+                color: "#7f7f7f",
+              }}
+            >
+              Tarif et prestations
+            </Typography>
+          </Box>
+          <Box sx={{ textAlign: "center" }}>
+            <Box
+              component="img"
+              src="/images/tarifs.png"
+              alt="Tarifs et prestations"
+              sx={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+              }}
+            />
+          </Box>
+        </Container>
+      </Box>
+
       <Footer />
     </Box>
   );
