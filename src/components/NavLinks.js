@@ -16,8 +16,8 @@ function NavLinks({ isMobile = false, handleCloseNavMenu, handleOpenContactModal
     { text: "Qui suis-je", href: '/#about' },
     { text: "Expertise", href: '/expertise' },
     { text: "Accompagnement", href: '/services', submenu: [
-      { text: "Pour les professionnels", href: '/services#pro' },
       { text: "Pour les particuliers", href: '/services#particuliers' },
+      { text: "Pour les professionnels", href: '/services#pro' },
       { text: "Tarif des prestations", href: '/services#tarif' },
     ] },
     { text: "The Daring Lab", href: '/lab' },

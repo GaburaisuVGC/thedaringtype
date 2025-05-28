@@ -89,148 +89,185 @@ function Services() {
           </Box>
 
           <Grid container spacing={4} justifyContent="center">
-            <Grid item xs={12} sm={6} md={4}>
-              <Card
-                sx={{
-                  backgroundColor: "#b5ccdc",
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                  padding: 2,
-                  boxSizing: "border-box",
-                  textAlign: "center",
-                  borderRadius: "25px",
-                  boxShadow: "none",
-                  fontFamily: "Josefin Sans",
-                  color: "#ffffff",
-                }}
-              >
-                <CardContent>
-                  <Typography
-                    variant="h5"
-                    component="div"
-                    gutterBottom
-                    sx={{
-                      fontFamily: "Josefin Sans",
-                      fontWeight: "bold",
-                      overflow: "hidden",
-                      color: "#ffffff",
-                    }}
-                  >
-                    Coaching CV
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    paragraph
-                    sx={{ fontFamily: "Josefin Sans", color: "#ffffff" }}
-                  >
-                    30 min
-                  </Typography>
-                </CardContent>
-                <CardActions sx={{ justifyContent: "center", mb: 2 }}>
-                  <Button
-                    variant="contained"
-                    href="mailto:hello@thedaringtype.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{
-                      width: { xs: "90%", sm: "auto" },
-                      maxWidth: "300px",
-                      fontFamily: "Josefin Sans",
-                      backgroundColor: "#a2adbb",
-                      color: "#ffffff",
-                      lineHeight: "1.5",
-                      padding: "10px 20px",
-                      textTransform: "none",
-                      fontSize: "1.2rem",
-                      borderColor: "#a2adbb",
-                      boxShadow: "none",
-                      "&:hover": {
-                        backgroundColor: "#88929e",
-                        color: "#e6e6e6",
-                        boxShadow: "none",
-                      },
-                      borderRadius: "8px",
-                    }}
-                  >
-                    Je prends rendez-vous
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
+  {/* Bloc Image */}
+  <Grid item xs={12} sm={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
+    <Card
+      sx={{
+        height: "100%",
+        width: "100%",
+        maxWidth: { xs: "100%", md: "300px" },
+        padding: 0,
+        borderRadius: "25px",
+        boxShadow: "none",
+        overflow: "hidden",
+      }}
+    >
+      <div style={{ 
+        position: 'relative', 
+        paddingTop: '100%',
+        overflow: 'hidden'
+      }}>
+        <img
+          src="/images/diana11.jpg"
+          alt="Description de l'image"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            borderRadius: '25px',
+          }}
+        />
+      </div>
+    </Card>
+  </Grid>
 
-            <Grid item xs={12} sm={6} md={4}>
-              <Card
-                sx={{
-                  backgroundColor: "#b5ccdc",
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                  padding: 2,
-                  boxSizing: "border-box",
-                  textAlign: "center",
-                  borderRadius: "25px",
-                  boxShadow: "none",
-                  fontFamily: "Josefin Sans",
-                  color: "#ffffff",
-                }}
-              >
-                <CardContent>
-                  <Typography
-                    variant="h5"
-                    component="div"
-                    gutterBottom
-                    sx={{
-                      fontFamily: "Josefin Sans",
-                      fontWeight: "bold",
-                      overflow: "hidden",
-                      color: "#ffffff",
-                    }}
-                  >
-                    Préparation d'entretien
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    paragraph
-                    sx={{ fontFamily: "Josefin Sans", color: "#ffffff" }}
-                  >
-                    60 min
-                  </Typography>
-                </CardContent>
-                <CardActions sx={{ justifyContent: "center", mb: 2 }}>
-                  <Button
-                    variant="contained"
-                    href="mailto:hello@thedaringtype.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{
-                      width: { xs: "90%", sm: "auto" },
-                      maxWidth: "300px",
-                      fontFamily: "Josefin Sans",
-                      backgroundColor: "#a2adbb",
-                      color: "#ffffff",
-                      lineHeight: "1.5",
-                      padding: "10px 20px",
-                      textTransform: "none",
-                      fontSize: "1.2rem",
-                      borderColor: "#a2adbb",
-                      boxShadow: "none",
-                      "&:hover": {
-                        backgroundColor: "#88929e",
-                        color: "#e6e6e6",
-                        boxShadow: "none",
-                      },
-                      borderRadius: "8px",
-                    }}
-                  >
-                    Je prends rendez-vous
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-          </Grid>
+  {/* Bloc Coaching CV */}
+  <Grid item xs={12} sm={6} md={4}>
+    <Card
+      sx={{
+        backgroundColor: "#b5ccdc",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        padding: 2,
+        boxSizing: "border-box",
+        textAlign: "center",
+        borderRadius: "25px",
+        boxShadow: "none",
+        fontFamily: "Josefin Sans",
+        color: "#ffffff",
+      }}
+    >
+      <CardContent>
+        <Typography
+          variant="h5"
+          component="div"
+          gutterBottom
+          sx={{
+            fontFamily: "Josefin Sans",
+            fontWeight: "bold",
+            overflow: "hidden",
+            color: "#ffffff",
+          }}
+        >
+          Coaching CV
+        </Typography>
+        <Typography
+          variant="body1"
+          paragraph
+          sx={{ fontFamily: "Josefin Sans", color: "#ffffff" }}
+        >
+          30 min
+        </Typography>
+      </CardContent>
+      <CardActions sx={{ justifyContent: "center", mb: 2 }}>
+        <Button
+          variant="contained"
+          href="mailto:hello@thedaringtype.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            width: { xs: "90%", sm: "auto" },
+            maxWidth: "300px",
+            fontFamily: "Josefin Sans",
+            backgroundColor: "#a2adbb",
+            color: "#ffffff",
+            lineHeight: "1.5",
+            padding: "10px 20px",
+            textTransform: "none",
+            fontSize: "1.2rem",
+            borderColor: "#a2adbb",
+            boxShadow: "none",
+            "&:hover": {
+              backgroundColor: "#88929e",
+              color: "#e6e6e6",
+              boxShadow: "none",
+            },
+            borderRadius: "8px",
+          }}
+        >
+          Je prends rendez-vous
+        </Button>
+      </CardActions>
+    </Card>
+  </Grid>
+
+  {/* Bloc Préparation d'entretien */}
+  <Grid item xs={12} sm={6} md={4}>
+    <Card
+      sx={{
+        backgroundColor: "#b5ccdc",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        padding: 2,
+        boxSizing: "border-box",
+        textAlign: "center",
+        borderRadius: "25px",
+        boxShadow: "none",
+        fontFamily: "Josefin Sans",
+        color: "#ffffff",
+      }}
+    >
+      <CardContent>
+        <Typography
+          variant="h5"
+          component="div"
+          gutterBottom
+          sx={{
+            fontFamily: "Josefin Sans",
+            fontWeight: "bold",
+            overflow: "hidden",
+            color: "#ffffff",
+          }}
+        >
+          Préparation d'entretien
+        </Typography>
+        <Typography
+          variant="body1"
+          paragraph
+          sx={{ fontFamily: "Josefin Sans", color: "#ffffff" }}
+        >
+          60 min
+        </Typography>
+      </CardContent>
+      <CardActions sx={{ justifyContent: "center", mb: 2 }}>
+        <Button
+          variant="contained"
+          href="mailto:hello@thedaringtype.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            width: { xs: "90%", sm: "auto" },
+            maxWidth: "300px",
+            fontFamily: "Josefin Sans",
+            backgroundColor: "#a2adbb",
+            color: "#ffffff",
+            lineHeight: "1.5",
+            padding: "10px 20px",
+            textTransform: "none",
+            fontSize: "1.2rem",
+            borderColor: "#a2adbb",
+            boxShadow: "none",
+            "&:hover": {
+              backgroundColor: "#88929e",
+              color: "#e6e6e6",
+              boxShadow: "none",
+            },
+            borderRadius: "8px",
+          }}
+        >
+          Je prends rendez-vous
+        </Button>
+      </CardActions>
+    </Card>
+  </Grid>
+</Grid>
 
           <Box sx={{ mt: 8 }}>
             <Typography

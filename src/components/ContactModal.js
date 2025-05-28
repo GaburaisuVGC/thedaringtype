@@ -6,6 +6,10 @@ import {
   TextField,
   Button,
   IconButton,
+  MenuItem,
+  Select,
+  FormControl,
+  InputLabel
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import emailjs from 'emailjs-com';
@@ -16,7 +20,9 @@ function ContactModal({ open, onClose }) {
     firstName: '',
     lastName: '',
     email: '',
-    subject: '',
+    phone: '',
+    userType: '',
+    message: '',
   });
   const [error, setError] = useState(null);
 
@@ -27,13 +33,35 @@ function ContactModal({ open, onClose }) {
     const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
     const userID = process.env.REACT_APP_EMAILJS_USER_ID;
 
+    // Déterminer le type d'utilisateur pour le sujet
+    const userTypeLabel = formData.userType === 'company' 
+      ? 'Professionnel' 
+      : formData.userType === 'individual' 
+        ? 'Particulier' 
+        : '';
+
+    // Construire le sujet du mail
+    const emailSubject = `${formData.firstName} ${formData.lastName}, ${userTypeLabel}, souhaite vous contacter !`;
+
+    // Construire le contenu du message
+    const emailMessage = `
+      Prénom: ${formData.firstName}
+      Nom: ${formData.lastName}
+      Email: ${formData.email}
+      Téléphone: ${formData.phone}
+      Type: ${formData.userType === 'company' 
+        ? 'Entreprise/École' 
+        : 'En reconversion, en recherche ou jeunes diplômés'}
+      Message: ${formData.message}
+    `;
+
     const templateParams = {
       to_name: 'The Daring Type',
       from_name: `${formData.firstName} ${formData.lastName}`,
-      from_email: formData.email,   
+      from_email: formData.email,
       reply_to: formData.email,
-      subject: formData.subject, 
-      message: 'Je souhaite prendre contact avec vous.', 
+      subject: emailSubject,
+      message: emailMessage,
     };
 
     emailjs.send(serviceID, templateID, templateParams, userID)
@@ -59,7 +87,9 @@ function ContactModal({ open, onClose }) {
       firstName: '',
       lastName: '',
       email: '',
-      subject: '',
+      phone: '',
+      userType: '',
+      message: '',
     });
     onClose();
   };
@@ -82,8 +112,8 @@ function ContactModal({ open, onClose }) {
       >
         <Box
           sx={{
-            width: { xs: '90%', md: '60%' },
-            height: { xs: 'auto', md: '60%' },
+            width: { xs: '90%', md: '75%' },
+            height: { xs: 'auto', md: '75%' },
             backgroundColor: '#fff',
             display: 'flex',
             flexDirection: { xs: 'column', md: 'row' },
@@ -110,6 +140,7 @@ function ContactModal({ open, onClose }) {
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
+              overflowY: 'auto',
             }}
           >
             <IconButton
@@ -166,13 +197,36 @@ function ContactModal({ open, onClose }) {
                   />
                   <TextField
                     fullWidth
-                    label="Votre message"
-                    name="subject"
-                    type="text"
-                    value={formData.subject}
+                    label="Téléphone"
+                    name="phone"
+                    value={formData.phone}
                     onChange={handleChange}
                     margin="normal"
                     required
+                  />
+                  <FormControl fullWidth margin="normal" required>
+                    <InputLabel id="user-type-label">Vous êtes...</InputLabel>
+                    <Select
+                      labelId="user-type-label"
+                      name="userType"
+                      value={formData.userType}
+                      onChange={handleChange}
+                      label="Vous êtes..."
+                    >
+                      <MenuItem value="company">Entreprise/École</MenuItem>
+                      <MenuItem value="individual">En reconversion, en recherche ou jeunes diplômé</MenuItem>
+                    </Select>
+                  </FormControl>
+                  <TextField
+                    fullWidth
+                    label="Votre message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    margin="normal"
+                    required
+                    multiline
+                    rows={4}
                   />
                   <Button
                     type="submit"
