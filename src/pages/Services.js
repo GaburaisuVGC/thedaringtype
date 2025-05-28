@@ -132,7 +132,7 @@ function Services() {
         height: "100%",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between",
+        justifyContent: "center",
         padding: 2,
         boxSizing: "border-box",
         textAlign: "center",
@@ -142,7 +142,7 @@ function Services() {
         color: "#ffffff",
       }}
     >
-      <CardContent>
+      <CardContent sx={{ py: 1 }}>
         <Typography
           variant="h5"
           component="div"
@@ -152,6 +152,7 @@ function Services() {
             fontWeight: "bold",
             overflow: "hidden",
             color: "#ffffff",
+            mb: 1,
           }}
         >
           Coaching CV
@@ -159,12 +160,16 @@ function Services() {
         <Typography
           variant="body1"
           paragraph
-          sx={{ fontFamily: "Josefin Sans", color: "#ffffff" }}
+          sx={{ 
+            fontFamily: "Josefin Sans", 
+            color: "#ffffff",
+            mb: 1, 
+          }}
         >
           30 min
         </Typography>
       </CardContent>
-      <CardActions sx={{ justifyContent: "center", mb: 2 }}>
+      <CardActions sx={{ justifyContent: "center", mt: 1, mb: 1 }}>
         <Button
           variant="contained"
           href="mailto:hello@thedaringtype.com"
@@ -204,7 +209,7 @@ function Services() {
         height: "100%",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between",
+        justifyContent: "center", 
         padding: 2,
         boxSizing: "border-box",
         textAlign: "center",
@@ -214,7 +219,7 @@ function Services() {
         color: "#ffffff",
       }}
     >
-      <CardContent>
+      <CardContent sx={{ py: 1 }}> 
         <Typography
           variant="h5"
           component="div"
@@ -224,6 +229,7 @@ function Services() {
             fontWeight: "bold",
             overflow: "hidden",
             color: "#ffffff",
+            mb: 1,
           }}
         >
           Préparation d'entretien
@@ -231,12 +237,16 @@ function Services() {
         <Typography
           variant="body1"
           paragraph
-          sx={{ fontFamily: "Josefin Sans", color: "#ffffff" }}
+          sx={{ 
+            fontFamily: "Josefin Sans", 
+            color: "#ffffff",
+            mb: 1, 
+          }}
         >
           60 min
         </Typography>
       </CardContent>
-      <CardActions sx={{ justifyContent: "center", mb: 2 }}>
+      <CardActions sx={{ justifyContent: "center", mt: 1, mb: 1 }}> 
         <Button
           variant="contained"
           href="mailto:hello@thedaringtype.com"

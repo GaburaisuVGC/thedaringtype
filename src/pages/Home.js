@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Box, Typography, Button, Grid } from "@mui/material";
+import { Container, Box, Typography, Button, Grid, Link } from "@mui/material";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useTheme } from "@mui/material/styles";
@@ -408,18 +408,20 @@ Les talents en transition professionnelle, ou jeunes diplômés  vers des parcou
 
         {/* Sous-parties empilées verticalement */}
         <Box sx={{ textAlign: { xs: "center", md: "left" } }}>
-          <Typography
+          <Link
             variant="body1"
-            component="h3"
             sx={{
               fontFamily: "Josefin Sans",
               fontWeight: "bold",
               color: "#7f7f7f",
               mt: 2,
+              cursor: "pointer",
             }}
+            href="/services#particuliers"
+            underline="hover"
           >
             Pour les talents
-          </Typography>
+          </Link>
           <Typography
             variant="body1"
             paragraph
@@ -427,18 +429,20 @@ Les talents en transition professionnelle, ou jeunes diplômés  vers des parcou
           >
             Je vous aide à naviguer dans des secteurs exigeants et en constante évolution, en vous donnant les outils nécessaires pour construire une carrière alignée avec vos ambitions.
           </Typography>
-          <Typography
+          <Link
             variant="body1"
-            component="h3"
             sx={{
               fontFamily: "Josefin Sans",
               fontWeight: "bold",
               color: "#7f7f7f",
               mt: 2,
+              cursor: "pointer",
             }}
+            href="/services#pro"
+            underline="hover"
           >
             Pour les professionnels
-          </Typography>
+          </Link>
           <Typography
             variant="body1"
             paragraph

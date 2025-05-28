@@ -118,6 +118,8 @@ function ContactModal({ open, onClose }) {
             display: 'flex',
             flexDirection: { xs: 'column', md: 'row' },
             boxShadow: 24,
+            borderRadius: '16px',
+            overflow: 'hidden',
           }}
         >
           {/* Partie gauche : illustration */}
@@ -128,6 +130,8 @@ function ContactModal({ open, onClose }) {
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               display: { xs: 'none', md: 'block' },
+              borderTopLeftRadius: '16px',
+              borderBottomLeftRadius: '16px',
             }}
           ></Box>
 
@@ -167,43 +171,55 @@ function ContactModal({ open, onClose }) {
                 )}
 
                 <form onSubmit={handleSubmit}>
-                  <TextField
-                    fullWidth
-                    label="Prénom"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                    margin="normal"
-                    required
-                  />
-                  <TextField
-                    fullWidth
-                    label="Nom"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                    margin="normal"
-                    required
-                  />
-                  <TextField
-                    fullWidth
-                    label="Email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    margin="normal"
-                    required
-                  />
-                  <TextField
-                    fullWidth
-                    label="Téléphone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    margin="normal"
-                    required
-                  />
+                  {/* Conteneur pour prénom et nom  */}
+                  <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: { xs: 0, md: 2 } }}>
+                    <TextField
+                      fullWidth
+                      label="Prénom"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      margin="normal"
+                      required
+                      sx={{ mb: { xs: 2, md: 0 } }}
+                    />
+                    <TextField
+                      fullWidth
+                      label="Nom"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      margin="normal"
+                      required
+                      sx={{ mb: { xs: 2, md: 0 } }}
+                    />
+                  </Box>
+
+                  {/* Conteneur pour email et téléphone  */}
+                  <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: { xs: 0, md: 2 } }}>
+                    <TextField
+                      fullWidth
+                      label="Email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      margin="normal"
+                      required
+                      sx={{ mb: { xs: 2, md: 0 } }}
+                    />
+                    <TextField
+                      fullWidth
+                      label="Téléphone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      margin="normal"
+                      required
+                      sx={{ mb: { xs: 2, md: 0 } }}
+                    />
+                  </Box>
+
                   <FormControl fullWidth margin="normal" required>
                     <InputLabel id="user-type-label">Vous êtes...</InputLabel>
                     <Select
@@ -214,7 +230,7 @@ function ContactModal({ open, onClose }) {
                       label="Vous êtes..."
                     >
                       <MenuItem value="company">Entreprise/École</MenuItem>
-                      <MenuItem value="individual">En reconversion, en recherche ou jeunes diplômé</MenuItem>
+                      <MenuItem value="individual">En reconversion, en recherche ou jeunes diplômés</MenuItem>
                     </Select>
                   </FormControl>
                   <TextField
@@ -227,6 +243,7 @@ function ContactModal({ open, onClose }) {
                     required
                     multiline
                     rows={4}
+                    sx={{ mb: 2 }}
                   />
                   <Button
                     type="submit"
