@@ -487,93 +487,97 @@ function Services() {
           </Box>
 
           <Box sx={{ position: "relative", mb: 6 }}>
-            <Box
-              component="img"
-              src="/images/illustration.png"
-              alt="Conférences et interventions en écoles"
-              sx={{
-                width: "100%",
-                height: { xs: "200px", md: "300px" },
-                display: "block",
-                borderRadius: "25px",
-                objectFit: "cover",
-                objectPosition: "center",
-              }}
-            />
-
-            <Box sx={{ textAlign: "center", mt: 4 }}>
-              <Card
-                sx={{
-                  backgroundColor: "#a2adbbff",
-                  padding: 2,
-                  boxSizing: "border-box",
-                  textAlign: "center",
-                  boxShadow: "none",
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                  borderRadius: "25px",
-                  fontFamily: "Josefin Sans",
-                  color: "#ffffff",
-                  width: { xs: "100%", md: "50%" },
-                  margin: "0 auto",
-                }}
-              >
-                <CardContent>
-                  <Typography
-                    variant="h5"
-                    component="div"
-                    gutterBottom
-                    sx={{
-                      fontFamily: "Josefin Sans",
-                      fontWeight: "bold",
-                      overflow: "hidden",
-                      color: "#ffffff",
-                    }}
-                  >
-                    Ateliers & Masterclass
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    paragraph
-                    sx={{ fontFamily: "Josefin Sans", color: "#ffffff" }}
-                  >
-                    écoles & universités
-                  </Typography>
-                </CardContent>
-                <CardActions sx={{ justifyContent: "center", mb: 2 }}>
-                  <Button
-                    variant="contained"
-                    href="mailto:hello@thedaringtype.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{
-                      width: { xs: "90%", sm: "auto" },
-                      maxWidth: "300px",
-                      fontFamily: "Josefin Sans",
-                      backgroundColor: "#7f7f7f",
-                      color: "#ffffff",
-                      lineHeight: "1.5",
-                      padding: "10px 20px",
-                      textTransform: "none",
-                      fontSize: "1.2rem",
-                      borderColor: "#7f7f7f",
-                      boxShadow: "none",
-                      "&:hover": {
-                        backgroundColor: "#636363",
-                        color: "#e6e6e6",
-                        boxShadow: "none",
-                      },
-                      borderRadius: "8px",
-                    }}
-                  >
-                    Préparons votre événement
-                  </Button>
-                </CardActions>
-              </Card>
-            </Box>
-          </Box>
+  <Grid container spacing={2} alignItems="center"> 
+    <Grid item xs={12} md={5}>
+      <Box
+        component="img"
+        src="/images/diana12.jpg"
+        alt="Conférences et interventions en écoles"
+        sx={{
+          height: { xs: "434px", md: "869px" },
+          width: "100%",
+          display: "block",
+          borderRadius: "25px",
+          objectFit: "cover",
+          objectPosition: "center",
+          maxHeight: "80vh",
+        }}
+      />
+    </Grid>
+    <Grid item xs={12} md={7} sx={{ pl: { md: 2 } }}> 
+      <Card
+        sx={{
+          backgroundColor: "#a2adbbff",
+          padding: 2,
+          boxSizing: "border-box",
+          textAlign: "center",
+          boxShadow: "none",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          borderRadius: "25px",
+          fontFamily: "Josefin Sans",
+          color: "#ffffff",
+          width: "100%",
+          maxWidth: "450px",
+          margin: "0 auto",
+        }}
+      >
+        <CardContent>
+          <Typography
+            variant="h5"
+            component="div"
+            gutterBottom
+            sx={{
+              fontFamily: "Josefin Sans",
+              fontWeight: "bold",
+              overflow: "hidden",
+              color: "#ffffff",
+            }}
+          >
+            Ateliers & Masterclass
+          </Typography>
+          <Typography
+            variant="body1"
+            paragraph
+            sx={{ fontFamily: "Josefin Sans", color: "#ffffff" }}
+          >
+            écoles & universités
+          </Typography>
+        </CardContent>
+        <CardActions sx={{ justifyContent: "center", mb: 2 }}>
+          <Button
+            variant="contained"
+            href="mailto:hello@thedaringtype.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              width: { xs: "90%", sm: "auto" },
+              maxWidth: "300px",
+              fontFamily: "Josefin Sans",
+              backgroundColor: "#7f7f7f",
+              color: "#ffffff",
+              lineHeight: "1.5",
+              padding: "10px 20px",
+              textTransform: "none",
+              fontSize: "1.2rem",
+              borderColor: "#7f7f7f",
+              boxShadow: "none",
+              "&:hover": {
+                backgroundColor: "#636363",
+                color: "#e6e6e6",
+                boxShadow: "none",
+              },
+              borderRadius: "8px",
+            }}
+          >
+            Préparons votre événement
+          </Button>
+        </CardActions>
+      </Card>
+    </Grid>
+  </Grid>
+</Box>
         </Container>
       </Box>
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Typography, Grid } from "@mui/material";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -10,46 +10,79 @@ function Lab() {
 
       {/* --- Introduction générale : The Daring Lab --- */}
       <Box
-        sx={{
-          width: "100%",
-          padding: { xs: 2, md: 8 },
-          boxSizing: "border-box",
-          marginTop: "100px",
-        }}
-      >
-        <Container
-          disableGutters
+  sx={{
+    width: "100%",
+    padding: { xs: 2, md: 8 },
+    boxSizing: "border-box",
+    marginTop: "100px",
+  }}
+>
+  <Container
+    disableGutters
+    sx={{
+      maxWidth: { xs: "100%", md: "1200px" },
+      mx: "auto",
+      px: { xs: 2, md: 0 },
+      textAlign: "left"
+    }}
+  >
+
+    <Typography
+      variant="h4"
+      sx={{
+        fontFamily: "Diphylleia",
+        fontWeight: "bold",
+        color: "#a2adbb",
+        mb: 4,
+      }}
+    >
+      The Daring Lab
+    </Typography>
+
+    <Grid container spacing={4} alignItems="center"> 
+
+      <Grid item xs={12} md={4}>
+        <Box
+          component="img"
+          src="/images/diana13.jpg"
+          alt="The Daring Lab"
           sx={{
-            maxWidth: { xs: "100%", md: "1200px" },
-            mx: "auto",
-            px: { xs: 2, md: 0 },
-            textAlign: "left"
+            width: "100%",
+            height: "auto",
+            maxHeight: "500px",
+            display: "block",
+            borderRadius: "25px",
+            objectFit: "cover",
+            objectPosition: "top",
           }}
-        >
-          <Typography
-            variant="h4"
-            sx={{
-              fontFamily: "Diphylleia",
-              fontWeight: "bold",
-              color: "#7f7f7f",
-              mb: 2,
-            }}
-          >
-            The Daring Lab
-          </Typography>
-          <Typography variant="body1" paragraph sx={{ color: "#7f7f7f" }}>
+        />
+      </Grid>
+      
+
+      <Grid item xs={12} md={8}>
+        <Box sx={{ 
+          
+          display: "flex", 
+          flexDirection: "column", 
+          justifyContent: "center", 
+          height: "100%"
+        }}>
+          <Typography variant="body1" paragraph sx={{ color: "#7f7f7f", fontFamily: "Diphylleia", fontWeight: "bold", fontSize: "1.2rem" }}>
             The Daring Lab, un espace pensé pour inspirer, guider et enrichir vos projets.
-            Ici, vous trouverez une collection exclusive de ressources, d’insights,
-            et d’outils conçus pour éclairer vos décisions, stimuler votre créativité
+            Ici, vous trouverez une collection exclusive de ressources, d'insights,
+            et d'outils conçus pour éclairer vos décisions, stimuler votre créativité
             et renforcer votre expertise.
           </Typography>
-          <Typography variant="body1" paragraph sx={{ color: "#7f7f7f" }}>
-            Que vous soyez à la recherche de stratégies pour vous démarquer, d’exemples
-            concrets pour naviguer dans un marché compétitif, ou simplement d’une dose
-            d’inspiration, The Daring Lab est votre allié. Explorez, apprenez, osez.
+          <Typography variant="body1" paragraph sx={{ color: "#7f7f7f", fontFamily: "Diphylleia", fontWeight: "bold", fontSize: "1.2rem" }}>
+            Que vous soyez à la recherche de stratégies pour vous démarquer, d'exemples
+            concrets pour naviguer dans un marché compétitif, ou simplement d'une dose
+            d'inspiration, The Daring Lab est votre allié. Explorez, apprenez, osez.
           </Typography>
-        </Container>
-      </Box>
+        </Box>
+      </Grid>
+    </Grid>
+  </Container>
+</Box>
 
       {/* --- ARTICLE 1 : "Pourquoi la diversité est un avantage compétitif..." --- */}
       <Box sx={{ width: "100%", padding: { xs: 0, md: 8 } }}>
